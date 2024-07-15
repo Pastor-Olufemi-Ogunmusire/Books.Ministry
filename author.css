@@ -1,0 +1,53 @@
+body {
+    background-color: cornsilk;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.pic {
+    margin: 10px;
+    margin-top: 40px;
+    height: 400px;
+    width: 350px;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35), 0 11px 8px rgba(0, 0, 0, 0.22);
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.pic:hover {
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.30);
+    padding: 2px 5px 2px 5px;
+    width: 400px;
+    height: 450px;
+}
+
+.writeup {
+    margin: 40px 10px 0 20px; /* Combined margin properties */
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Responsive styles for screens between 101px and 900px */
+@media (min-width: 101px) and (max-width: 900px) {
+    .writeup {
+        font-size: 20px; /* Adjusted font size for smaller screens */
+    }
+    .pic {
+        width: 80%; /* Adjust width for responsiveness */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Responsive styles for screens smaller than 100px */
+@media (max-width: 100px) {
+    .writeup {
+        font-size: 15px; /* Further reduce font size */
+    }
+    .pic {
+        width: 100%; /* Full width for very small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
